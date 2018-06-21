@@ -15,7 +15,7 @@ namespace WebApi.Entities.Config
             builder.HasMany(x => x.PointsOfInterest)
                 .WithOne(x => x.City)
                 .HasForeignKey(x => x.CityId);
-            builder.Property(x => x.Name).IsRequired().HasMaxLength(51);
+            builder.Property(x => x.Name).IsRequired().HasMaxLength(50);
             builder.Property(x => x.Description).HasMaxLength(200);
         }
     }
